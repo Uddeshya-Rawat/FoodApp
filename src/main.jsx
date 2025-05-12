@@ -8,6 +8,7 @@ import Layout from './Route/Layout.jsx'
 import Home from './Pages/Home.jsx'
 import AllProducts from './Pages/AllProducts.jsx'
 import Products from './Pages/Products.jsx'
+import { Cart } from './Pages/Cart.jsx'
 
 
 
@@ -18,7 +19,7 @@ const router =createBrowserRouter([
       
         {
           path:"/",
-          element:<Home/>
+          element:<App/>
           
         },
         {
@@ -28,6 +29,10 @@ const router =createBrowserRouter([
         {
           path:"/products/:category",
           element:<Products/>
+        },
+        {
+          path:'/cart',
+          element:<Cart/>
         }
       ]
 

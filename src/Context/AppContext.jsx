@@ -2,7 +2,7 @@
 // make context provider 
 // use context
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { categories } from "../assets/Categories";
 
 
@@ -11,10 +11,21 @@ export const AppContext=createContext();
 export const AppContextProvider=({children})=>{
     
     const [user,setUser]=useState(null);
+    const [items,setItems]=useState(()=>{
+        // checks if there is cartItems 
+        // helps to store data after refresh 
+        const storedItems=localStorage.getItem('cartItems')
+        return storedItems?JSON.parse(storedItems):[]
+    });
 
-    const [showUserLogin,setShowUserLogin]=useState(false)
+    useEffect(()=>{
+           // store  cart items in localstorage
+           localStorage.setItem('cartItems',JSON.stringify(items));
+    },[items])
 
-    const value={user,setUser,showUserLogin,setShowUserLogin,categories}
+    
+
+    const value={user,setUser,categories,items,setItems}
     return <AppContext.Provider value={value}>
         {children}
     </AppContext.Provider>
