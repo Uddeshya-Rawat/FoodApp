@@ -1,10 +1,10 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { AppContext } from '../Context/AppContext';
 
 export const Cart = () => {
 
   const {items,setItems}=useContext(AppContext)
-  const [cartItems, setCartItems] = useState(items);
+  
 
   // handle increase and decrase of quantity
   const handleIncrease = (itemName) => {
