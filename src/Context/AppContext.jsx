@@ -10,7 +10,7 @@ export const AppContext=createContext();
 
 export const AppContextProvider=({children})=>{
     
-    const [user,setUser]=useState(null);
+   
     const [items,setItems]=useState(()=>{
         // checks if there is cartItems 
         // helps to store data after refresh 
@@ -25,7 +25,7 @@ export const AppContextProvider=({children})=>{
 
     
 
-    const value={user,setUser,categories,items,setItems}
+    const value={categories,items,setItems}
     return <AppContext.Provider value={value}>
         {children}
     </AppContext.Provider>
