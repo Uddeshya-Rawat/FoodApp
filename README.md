@@ -38,7 +38,7 @@ A simple and responsive food ordering web app built with **React**, using **Cont
 git clone https://github.com/Uddeshya-Rawat/FoodApp.git
 cd foodApp
 
-### 2. Clone the Repository
+### 2. Install the dependencies
 npm i
 
 ### 3. Start the server
