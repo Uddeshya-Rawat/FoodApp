@@ -15,7 +15,23 @@ A simple and responsive food ordering web app built with **React**, using **Cont
 - 🧾 Dynamic food categories
 
 ---
+ ### 📂 Folder Structure
+```graphql
+food-app/
+├── public/
+├── src/
+│   ├── assets/         # Images, icons, etc.
+│   ├── components/     # Reusable UI components (e.g., Navbar, FoodCard, Cart)
+│   ├── context/        # Context API files for global state (e.g., CartContext)
+│   ├── pages/          # Main pages (e.g., Home, Menu, CartPage)
+│   ├── route/          # React Router setup
+│   ├── App.jsx         # App entry point
+│   └── main.jsx        # React DOM render entry
+├── tailwind.config.js
+├── package.json
+└── README.md
 
+```
 
 ---
 
@@ -45,6 +61,28 @@ npm i
 npm run dev 
 
 ---
+```
+
+
+```bash
+### install these dependencies
+
+"dependencies": {
+  "@heroicons/react": "^2.2.0",
+  "@tailwindcss/vite": "^4.1.4",
+  "react": "^19.0.0",
+  "react-dom": "^19.0.0",
+  "react-hot-toast": "^2.5.2",
+  "react-router-dom": "^7.5.0",
+  "tailwindcss": "^4.1.4"
+}
+
+```
+ ### 💡 Contribution
+
+
+Feel free to fork this repository and contribute. Pull requests are welcome!
+
 
 
 
